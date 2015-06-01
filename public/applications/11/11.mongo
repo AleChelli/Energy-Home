@@ -1,0 +1,48 @@
+{
+    "address" : "99",
+    "db" : {
+        "materassi" : {
+            "0" : "Nuvola",
+            "1" : "Elisir",
+            "2" : "Cover",
+            "3" : "Aquagel",
+            "4" : "Lady soft zip/Lady soft",
+            "5" : "Bios crine zip",
+            "6" : "Oblio MP",
+            "7" : "Dormiglione",
+            "8" : "Pixel",
+            "9" : "Lady più zip/Lady più",
+            "10" : "Memory/Aquasan",
+            "11" : "Bliss",
+            "12" : "Oblio AP",
+            "13" : "Fitness/Mariana's"
+        }
+    },
+    "name" : "Lordflex's",
+    "objectId" : "11",
+    "properties" : {
+        "accelx" : "",
+        "add_class" : "0",
+        "funzionalita" : "0",
+        "info" : "0",
+        "like0" : "0",
+        "like1" : "0",
+        "like10" : "0",
+        "like11" : "0",
+        "like12" : "0",
+        "like13" : "0",
+        "like2" : "0",
+        "like3" : "0",
+        "like4" : "0",
+        "like5" : "0",
+        "like6" : "0",
+        "like7" : "0",
+        "like8" : "0",
+        "like9" : "0",
+        "materassi" : "4",
+        "move" : "0",
+        "onoff" : "1",
+        "simulatore" : "0"
+    },
+    "protocol" : "l"
+}

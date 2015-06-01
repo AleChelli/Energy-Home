@@ -1,0 +1,51 @@
+<style>
+    @media (min-width: 481px) and (max-width: 1000px) {
+        .button_ {
+            width: 105px;
+            height: 105px;
+            line-height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 0;
+            border-radius: 2000px;
+            border: solid 1px rgb(88, 170, 220);
+            font-size: 35px;
+        }
+    }
+    @media (min-width: 1001px) {
+        .button_ {
+            margin: 0;
+            text-align: center;
+            padding: 0;
+            width: 66px;
+            height: 66px;
+            line-height: 66px;
+            border-radius: 2000px;
+            border: solid 1px rgb(88, 170, 220);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+</style>
+<div id="ApioApplication2" ng-app="ApioApplication2" style="padding: 10px;">
+	<div ng-controller="defaultController">
+		<topappapplication></topappapplication>
+    	<div id="app" style="display: block;">
+			<trigger propertyname="onoff" labelon="Play" labeloff="Pausa"></trigger>
+			<slider propertyname="volume" label="Volume" min="0" max="255" step="1"></slider>
+			<property propertyname="cambia" label="Cambia">
+				<div style="float: right;">
+					<div class="button_" ng-click="back()" style="display: inline-block;">
+				    	<span><<</span>
+				    </div>
+				    <div class="button_" ng-click="next()" style="display: inline-block;">
+				    	<span>>></span>
+				    </div>
+				</div>
+			</property>
+            <list propertyname="canzoni" label="Canzoni"></list>
+		</div>
+	</div>
+</div>
+<script src="applications/2/2.js"></script>

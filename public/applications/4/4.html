@@ -1,0 +1,14 @@
+<div id="ApioApplication4" ng-app="ApioApplication4"  style="padding:10px;">
+	<div ng-controller="defaultController">
+	    <topappapplication></topappapplication>
+        <div id="app" style="display: block;">
+            <trigger propertyname="onoff" labelon="On" labeloff="Off"></trigger>
+            <slider propertyname="verde" label="Red" min="0" max="255" step="1" event="input" updatedataonce="true"></slider>
+            <slider propertyname="blu" label="Green" min="0" max="255" step="1" event="input" updatedataonce="true"></slider>
+            <slider propertyname="rosso" label="Blue" min="0" max="255" step="1" event="input" updatedataonce="true"></slider>
+            <slider propertyname="strobo" label="Strobo" min="0" max="1000" step="1" event="input" updatedataonce="true"></slider>
+            <slider propertyname="games" label="Random Games" min="0" max="1000" step="1" event="input" updatedataonce="true"></slider>
+        </div>
+	</div>
+</div>
+<script src="applications/4/4.js"></script>

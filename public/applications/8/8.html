@@ -1,0 +1,12 @@
+<div id="ApioApplication8" ng-app="ApioApplication8" style="padding:10px;">
+    <div ng-controller="defaultController">
+        <topappapplication></topappapplication>
+        <div id="app" style="display: block;">
+            <trigger propertyname="execcycle" labelon="Start" labeloff="Pause"></trigger>
+            <asyncdisplay propertyname="temperature" label="Temperature" listener="getTemperature()"></asyncdisplay>
+            <list propertyname="cycle" label="Cycle"></list>
+            <asyncdisplay propertyname="remainingtime" label="RemainingTime" listener="getRemainingTime()"></asyncdisplay>
+        </div>
+    </div>
+</div>
+<script src="applications/8/8.js"></script>

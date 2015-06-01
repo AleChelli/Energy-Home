@@ -1,0 +1,22 @@
+<style>
+    @media only screen and (max-width: 991px) {
+        .mobile_margin{
+            margin-top: 20%;
+        }
+    }
+</style>
+<div id="ApioApplication21" ng-app="ApioApplication21" style="padding:10px;">
+	<div ng-controller="defaultController">
+    	<topappapplication></topappapplication>
+    	<div id="app" class="mobile_margin" style="display:block;">
+            <div ng-show="isAdmin">
+                <list propertyname="onoff1" label="Bevanda 1" arraylist listener="setOnoff(1)"></list>
+                <list propertyname="onoff2" label="Bevanda 2" arraylist listener="setOnoff(2)"></list>
+                <list propertyname="onoff3" label="Bevanda 3" arraylist listener="setOnoff(3)"></list>
+                <list propertyname="onoff4" label="Bevanda 4" arraylist listener="setOnoff(4)"></list>
+            </div>
+    		<list propertyname="cocktail" label="Cocktail"></list>
+    	</div>
+    </div>
+</div>
+<script src="applications/21/21.js"></script>

@@ -1,0 +1,14 @@
+{
+"name" : "Centrale Irrigazione",
+"objectId" : "13",
+"protocol" : "l",
+"address" : "567",
+"properties": {
+		"onoff" : "0",
+		"onoff1" : "0"},
+"notifications": {
+},
+"db" : {
+
+	}
+}

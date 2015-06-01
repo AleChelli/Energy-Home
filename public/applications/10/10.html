@@ -1,0 +1,35 @@
+<style>
+    .img{
+        float: right;
+        height: 30%;
+        width: 30%;
+    }
+</style>
+<div id="ApioApplication10" ng-app="ApioApplication10" style="padding:10px;">
+	<div ng-controller="defaultController">
+        <topappapplication></topappapplication>
+        <div id="app" style="display:block;">
+            <property propertyname="wavein" label="Wave In">
+                <img ng-show="object.properties.wavein === '0'" class="img" src="applications/10/img/wave_in.png" ng-click="wavein()" />
+                <img ng-show="object.properties.wavein === '1'" class="img" src="applications/10/img/wave_in_clicked.png" ng-click="wavein()" />
+                <input propertyinput style="display: none;" />
+            </property>
+            <property propertyname="waveout" label="Wave Out">
+                <img ng-show="object.properties.waveout === '0'" class="img" src="applications/10/img/wave_out.png" ng-click="waveout()" />
+                <img ng-show="object.properties.waveout === '1'" class="img" src="applications/10/img/wave_out_clicked.png" ng-click="waveout()" />
+                <input propertyinput style="display: none;" />
+            </property>
+            <property propertyname="fist" label="Fist">
+                <img ng-show="object.properties.fist === '0'" class="img" src="applications/10/img/fist.png" ng-click="fist()" />
+                <img ng-show="object.properties.fist === '1'" class="img" src="applications/10/img/fist_clicked.png" ng-click="fist()" />
+                <input propertyinput style="display: none;" />
+            </property>
+            <property propertyname="fingerspread" label="Finger Spread">
+                <img ng-show="object.properties.fingerspread === '0'" class="img" src="applications/10/img/finger_spread.png" ng-click="fingerspread()" />
+                <img ng-show="object.properties.fingerspread === '1'" class="img" src="applications/10/img/finger_spread_clicked.png" ng-click="fingerspread()" />
+                <input propertyinput style="display: none;" />
+            </property>
+        </div>
+    </div>
+</div>
+<script src="applications/10/10.js"></script>

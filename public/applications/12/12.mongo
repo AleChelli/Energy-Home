@@ -1,0 +1,28 @@
+{
+"name" : "Motore Modus",
+"objectId" : "12",
+"protocol" : "l",
+"address" : "99",
+"properties": {
+		"materassi" : "0"},
+"notifications": {
+},
+"db" : {
+		"materassi" : {
+		"0" : "Nuvola",
+		"1" : "Elisir",
+		"2" : "Cover",
+		"3" : "Aquagel",
+		"4" : "Lady soft zip/Lady soft",
+		"5" : "Bios crine zip",
+		"6" : "Oblio MP",
+		"7" : "Dormiglione",
+		"8" : "Pixel",
+		"9" : "Lady più zip/Lady più",
+		"10" : "Memory/Aquasan",
+		"11" : "Bliss",
+		"12" : "Oblio AP",
+		"13" : "Fitness/Mariana's"
+		}
+	}
+}

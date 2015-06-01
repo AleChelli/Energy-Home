@@ -1,0 +1,2419 @@
+<style>
+@font-face {
+  font-family: InterstateUltraBlackCondensed;
+  src: url(applications/11/font/Interstate-UltraBlackCondensed/Interstate-UltraBlackCondensed.ttf);
+}
+@font-face {
+  font-family: Interstate-LightCondensed;
+  src: url(applications/11/font/Interstate-LightCondensed/Interstate-LightCondensed.ttf);
+}
+@font-face {
+  font-family: Interstate-BoldCondensed;
+  src: url(applications/11/font/Interstate-BoldCondensed/Interstate-BoldCondensed.ttf);
+}
+@-webkit-keyframes myfirst {
+    0%   {opacity: 1;}
+    25%  {opacity: 0.5;}
+    50%  {opacity: 1;}
+    75%  {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+#app{
+	margin-top: 0 !important;
+}
+.materassoInPosizione{
+	-webkit-animation-name: myfirst;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    //-webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+	#materassi{
+		border: none;
+	}
+
+	div#app{
+		display: block;
+	}
+
+	.application{
+		padding: 10px;
+		//background: url(applications/11/img/background.png) no-repeat;
+		background-size: 100% 100%;
+        height: 100%;
+	}
+    .fun{
+        background: url(applications/11/img/funzionalita_background.png) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+	.funzionalita{
+		background: url(applications/11/img/funzionalita.png) no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.funzionalita:hover{
+		background: url(applications/11/img/funzionalita_hover.png) no-repeat;
+		background-size: 100% 100%;
+	}
+
+    .image-center{
+        width: 14.7%;
+    }
+
+    .inf{
+        background: url(applications/11/img/info_background.png) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+	.info{
+		background: url(applications/11/img/info.png) no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.info:hover{
+		background: url(applications/11/img/info_hover.png) no-repeat;
+		background-size: 100% 100%;
+	}
+
+    .no-margin-right{
+        margin-right: 0;
+    }
+
+    .sim{
+        background: url(applications/11/img/simulatore_background.png) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+	.simulatore{
+		background: url(applications/11/img/simulatore.png) no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.simulatore:hover{
+		background: url(applications/11/img/simulatore_hover.png) no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.subapp{
+		padding: 10px;
+		display: none;
+		position: absolute;
+		width: 100%;
+		z-index: 1032;
+	}	
+	
+	.backgroundSimulatore{
+    background: -webkit-linear-gradient(#284679,#001548);
+    background: linear-gradient(#284679,#001548);
+	}
+	    
+	.avvisoSmartphone{
+		display: none;
+	} 
+	
+/*BEGIN DEVICE STYLE WHIT MEDIA QUERY*/
+/*SMARTPHONE IPHONE VERTICALE*/
+@media (max-width: 319px){
+        .margin-top-mobile{
+            margin-top: 50%;
+        }
+        .doubles{
+            padding-top: 120%;
+            padding-left: 45%;
+        }
+	.mobileSmartphone{
+		background: #fff;
+	}
+	.avvisoSmartphone{
+		display: block !important;
+		font-size: 30px;
+		color: #000;
+	}
+	.titolo1{
+		display: none;
+	}
+	.titolo2{
+		display: none;
+	}
+	}
+/*IPHONE ORIZZONTALE*/
+@media (min-width: 320px) and (max-width: 499px) and (orientation: portrait){
+    .doubles {
+        padding-top: 120%;
+        padding-left: 45%;
+    }
+}
+@media (min-width: 320px) and (max-width: 499px) and (orientation: landscape){
+    .doubles {
+        padding-top: 50%;
+        padding-left: 50%;
+    }
+    
+}
+
+@media (min-width: 320px) and (max-width: 380px) {
+    .testoSimulatoreFooterMobile{
+        height: auto;
+        font-size: 12px;
+        color: #fff;
+        line-height: 12px;
+        text-align: center;
+        padding-top: 2% !important;
+        padding-bottom: 2% !important;
+    }
+    .nuovaProvaMobile{
+        text-align: center;
+        font-size: 29px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: #fff;
+        background-color: #97B0D7;
+        height: 60px;
+        line-height: 60px;
+    }
+	.testoSchedeTecniche{
+		  height: 80%;
+	}
+
+    .mobile_clicked{
+        opacity: 0.75;
+    }
+
+    .class_1{
+        background: url(applications/11/img/schedeMobile/Nuvola.png) no-repeat;
+        background-size: 100%;
+		margin-top: 0%;
+		height: 200%;
+    }
+
+    .class_2{
+        background: url(applications/11/img/schedeMobile/Elisir.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_3{
+        background: url(applications/11/img/schedeMobile/Cover.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_4{
+        background: url(applications/11/img/schedeMobile/Aquagel.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_5_zip{
+        background: url(applications/11/img/schedeMobile/LadySoft.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_5{
+        background: url(applications/11/img/schedeMobile/LadySoftZip.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_6{
+        background: url(applications/11/img/schedeMobile/Bios.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_7{
+        background: url(applications/11/img/schedeMobile/OblioMP.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_8{
+        background: url(applications/11/img/schedeMobile/Dormiglione.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_9{
+        background: url(applications/11/img/schedeMobile/Pixel.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_10_zip{
+        background: url(applications/11/img/schedeMobile/LadyPiu.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_10{
+        background: url(applications/11/img/schedeMobile/LadyPiuZip.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_11{
+        background: url(applications/11/img/schedeMobile/Aquasan.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_11_zip{
+        background: url(applications/11/img/schedeMobile/Memory.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_12{
+        background: url(applications/11/img/schedeMobile/Bliss.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_13{
+        background: url(applications/11/img/schedeMobile/OblioAP.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_14{
+        background: url(applications/11/img/schedeMobile/Fitness.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_14_zip{
+        background: url(applications/11/img/schedeMobile/Marianas.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+		.brevettoMobile {
+		  height: 30% !important;
+		  margin-top: 55%;
+		}
+		.rowMaterassiBackDispari {
+		  box-shadow: 0px 0px 2px -1px #fff;
+		  background-color: rgba(255, 255, 255, 0.16);
+		}		
+		.text{
+		    //margin-left: 35%;
+		    color: #001F5B;
+		    font-size: 180%;
+		    margin-top: 4%;
+		    -webkit-overflow-scrolling: touch;
+		}
+		.immagineInfoLordflexs{
+		  	background-image: url('applications/11/img/info-lordflex-.png');
+		  	background-size: 100% 100%;
+		  	height: 50% !important;
+		    }
+		.immagineInfoSimulatore{
+			background-image: url('applications/11/img/info-simulatore-immagine.png');
+			background-size: 100% 100%;
+			height: 50% !important;
+		}
+        .margin-top-mobile{
+            margin-top: 5%;
+        }
+        .materassiImg{
+	        padding: 0;
+        }
+        
+	    .testoSimulatore{
+			font-family: Interstate-LightCondensed;
+	    	text-align: center;
+		    height: auto;
+		    font-size: 15px;
+		    padding-top: 0%;
+		    padding-bottom: 2%;
+		    color: #fff;
+		}
+		.testoSimulatorePincipale{
+			font-family: Interstate-BoldCondensed;
+		    padding-top: 1%;
+		    padding-bottom: 1%;
+			text-align: center;
+		    height: auto;
+		    font-size: 21px;
+		    color: #fff; 
+			}
+		.testoSimulatoreFooter{
+		    height: 5%;
+		    font-size: 10px;
+		    color: #fff; 
+	    }
+	    .brevettoLordflexs{
+		    //background-color: #000;
+			background-image: url('applications/11/img/logo-brevetto-esclusivo.png');
+			height: 35px;
+			background-size: 40%;
+			background-repeat: no-repeat;
+			background-position-x: 50%;
+	    }
+
+        .maxHeight{
+		    height: 100%;
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+	    }
+	    .Height{
+		    height:90%;
+	    }
+	    .viewMobile{
+		    display: none;
+	    }
+	    .viewMobileOk{
+		    display: block;
+	    }
+	    .home2{
+		    background: -webkit-linear-gradient(#284679,#001548);
+		     background: linear-gradient(#284679,#001548);
+		    height: 100%;
+		    overflow-y: scroll;
+	    }
+	    .contenitoreMaterassi{
+		    //overflow-y:scroll; 
+		    -webkit-overflow-scrolling: touch;
+		    height:78%;
+	    }
+	    .testoTopBottoni{
+			font-family: InterstateUltraBlackCondensed;
+			color: #fff;
+			font-size: 12pt;
+			text-align: center;
+			margin-top: 10%;
+		}
+		.testoBottoniMaterassi{
+		  	font-family: Interstate-LightCondensed;
+		 	color: #fff;
+		 	font-size: 11pt;
+		 	line-height: 11pt;
+		 	text-transform: uppercase;
+		 	text-align: left;
+		 	padding-left: 3% !important;
+		 	padding-right: 3% !important;
+		 	padding-top: 7% !important;
+		 	padding-bottom: 2% !important;
+		}
+		.schedaTecnica{
+			  font-family: Interstate-LightCondensed;
+			  color: #fff;
+			  font-size: 8pt;
+			  line-height: 10pt;
+			  padding-left: 30% !important;
+			  padding-top: 35% !important;
+		}
+		.frecciaMaterassi{
+		    font-family: Interstate-LightCondensed;
+			color: #fff;
+			font-size: 25pt;
+			padding-left: 50% !important;
+			padding-top: 30% !important;
+			text-align: right;
+			padding-bottom: 4% !important;
+		}
+		.rowMaterassi{
+			  box-shadow: 0px 0px 2px -1px #fff;
+		}
+		.materassi div{
+		   padding: 0;
+		   margin: 0;
+		   //line-height: 250% !important;
+		   //margin-bottom: 2%;
+	    }
+	    .footerSimulatore{
+		    margin-top: 2%;
+			}
+	    .home1{
+	    	height: 100%;
+			background-image: url('applications/11/img/immagine-bambino-home.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+		}	
+		.element > div{
+			height: 70px;
+		}
+		.space-div {
+			height: 240px;
+			}
+	    .titolo1{
+	    	font-family: InterstateUltraBlackCondensed;
+		  	font-size: 49px;
+		  	//text-align: center; 
+		  	padding-top: 4%;
+		  	padding-bottom: 4%; 
+		  	padding-left: 5%;
+		  	padding-right: 5%;
+		  	line-height: 60px;
+		  	color: #fff;
+	    }
+	    .titolo2{
+	    	font-family: Interstate-LightCondensed;
+	    	padding-left: 5%;
+			padding-right: 5%;
+	    	font-size: 35px;
+		  //text-align: center;	    
+		  	padding-top: 1%;
+		  	padding-bottom: 1%;
+		  	line-height: 35px;
+		  	color: #fff;
+		  }
+        div#app{
+            margin-top: 70%;
+        }
+
+        ._like{
+          	width: 17%;
+		  	padding-bottom: 4%;
+		  	padding-top: 4%;
+		 	padding-left: 5%;
+	    }
+
+        .bottoniSimulatore{
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: #001548;
+        }
+        .bottoniSimulatore img{
+	        width: 400%;
+        }
+
+        .materassiSimulatore{
+            padding-top: 11%;
+        }
+
+        .text{
+            height: 87%;
+            //width: 65%;
+            -webkit-overflow-scrolling: touch;
+        }
+		
+    }
+@media (min-width: 381px) and (max-width: 767px) {
+    .testoSimulatoreFooterMobile{
+        height: auto;
+        font-size: 12px;
+        color: #fff;
+        line-height: 12px;
+        text-align: center;
+        padding-top: 2% !important;
+        padding-bottom: 2% !important;
+    }
+    .nuovaProvaMobile{
+        text-align: center;
+        font-size: 29px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: #fff;
+        background-color: #97B0D7;
+        height: 60px;
+        line-height: 60px;
+    }
+.testoSchedeTecniche{
+		  height: 80%;
+	}
+
+    .mobile_clicked{
+        opacity: 0.75;
+    }
+
+	.class_1{
+        background: url(applications/11/img/schedeMobile/Nuvola.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_2{
+        background: url(applications/11/img/schedeMobile/Elisir.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_3{
+        background: url(applications/11/img/schedeMobile/Cover.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_4{
+        background: url(applications/11/img/schedeMobile/Aquagel.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_5_zip{
+        background: url(applications/11/img/schedeMobile/LadySoft.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_5{
+        background: url(applications/11/img/schedeMobile/LadySoftZip.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_6{
+        background: url(applications/11/img/schedeMobile/Bios.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_7{
+        background: url(applications/11/img/schedeMobile/OblioMP.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_8{
+        background: url(applications/11/img/schedeMobile/Dormiglione.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_9{
+        background: url(applications/11/img/schedeMobile/Pixel.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_10_zip{
+        background: url(applications/11/img/schedeMobile/LadyPiu.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_10{
+        background: url(applications/11/img/schedeMobile/LadyPiuZip.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_11{
+        background: url(applications/11/img/schedeMobile/Memory.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_11_zip{
+        background: url(applications/11/img/schedeMobile/Aquasan.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_12{
+        background: url(applications/11/img/schedeMobile/Bliss.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_13{
+        background: url(applications/11/img/schedeMobile/OblioAP.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_14{
+        background: url(applications/11/img/schedeMobile/Fitness.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+
+    .class_14_zip{
+        background: url(applications/11/img/schedeMobile/Marianas.png) no-repeat;
+        /* LOLLO
+        background-size: 58% 83%;
+		margin-top: 0%;
+		height: 60%;
+		background-position-y: 90% !important;
+		background-position-x: 50%;
+		*/
+        /* DISA 1
+        background-size: 60% 75%;
+        margin-top: 0%;
+        height: 120%;
+        background-position-y: 90% !important;
+        background-position-x: 50%;*/
+        background-size: 100%;
+        margin-top: 0%;
+        height: 200%;
+    }
+    
+	.brevettoMobile {
+	  height: 30% !important;
+	  margin-top: 55%;
+	}
+		.rowMaterassiBackDispari {
+		  box-shadow: 0px 0px 2px -1px #fff;
+		  background-color: rgba(255, 255, 255, 0.16);
+		}	
+		.text{
+		    //margin-left: 35%;
+		    color: #001F5B;
+		    font-size: 180%;
+		    margin-top: 4%;
+		    -webkit-overflow-scrolling: touch;
+		}
+		.immagineInfoLordflexs{
+		  	background-image: url('applications/11/img/info-lordflex-.png');
+		  	  background-size: 53% 100%;
+		  	  height: 50% !important;
+		  	  background-repeat: no-repeat;
+		  	  background-position-x: 50%;
+		    }
+		.immagineInfoSimulatore{
+			background-image: url('applications/11/img/info-simulatore-immagine.png');
+			  background-size: 53% 100%;
+			  height: 50% !important;
+			  background-repeat: no-repeat;
+			  background-position-x: 50%;
+		}
+        .margin-top-mobile{
+            margin-top: 5%;
+        }
+        .materassiImg{
+	        padding: 0;
+        }
+        
+	    .testoSimulatore{
+    font-family: Interstate-LightCondensed;
+    	text-align: center;
+	    height: auto;
+	    font-size: 15px;
+	    padding-top: 0%;
+	    padding-bottom: 2%;
+	    color: #fff;
+    }
+    .testoSimulatorePincipale{
+    font-family: Interstate-BoldCondensed;
+	    padding-top: 1%;
+	    padding-bottom: 1%;
+	   text-align: center;
+	    height: auto;
+	    font-size: 21px;
+	    color: #fff; 
+    }
+    .testoSimulatoreFooter{
+	    height: 5%;
+	    font-size: 10px;
+	    color: #fff; 
+    }
+    .brevettoLordflexs{
+	    //background-color: #000;
+		background-image: url('applications/11/img/logo-brevetto-esclusivo.png');
+		height: 35px;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position-x: 50%;
+    }
+    .maxHeight{
+	    height: 100%;
+		overflow-y: scroll;
+  		-webkit-overflow-scrolling: touch;
+    }
+    .Height{
+	    height:90%;
+    }
+    .viewMobile{
+	    display: none;
+    }
+    .viewMobileOk{
+	    display: block;
+    }
+    .home2{
+	    background: -webkit-linear-gradient(#284679,#001548);
+	     background: linear-gradient(#284679,#001548);
+	    height: 100%;
+	    overflow-y: scroll;
+    }
+    .contenitoreMaterassi{
+	    //overflow-y:scroll; 
+	    -webkit-overflow-scrolling: touch;
+	    height:78%;
+    }
+    	.testoTopBottoni{
+	  font-family: InterstateUltraBlackCondensed;
+  color: #fff;
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 10%;
+}
+ 	.testoBottoniMaterassi{
+	 	  font-family: Interstate-LightCondensed;
+	 	  color: #fff;
+	 	  font-size: 11pt;
+	 	  line-height: 11pt;
+	 	  text-transform: uppercase;
+	 	  text-align: left;
+	 	  padding-left: 3% !important;
+	 	  padding-right: 3% !important;
+	 	  padding-top: 9% !important;
+	 	  padding-bottom: 2% !important;
+	 	  }
+		.schedaTecnica{
+			 font-family: Interstate-LightCondensed;
+			 color: #fff;
+			 font-size: 13pt;
+			 line-height: 13pt;
+			 padding-left: 17% !important;
+			 padding-top: 35% !important;
+		}
+		.frecciaMaterassi{
+		    font-family: Interstate-LightCondensed;
+			color: #fff;
+			font-size: 25pt;
+			padding-left: 50% !important;
+			padding-top: 30% !important;
+			text-align: right;
+			padding-bottom: 4% !important;
+		}
+.rowMaterassi{
+	  box-shadow: 0px 0px 2px -1px #fff;
+}
+	.materassi div{
+		    padding: 0;
+		    margin: 0;
+		    //line-height: 250% !important;
+		    //margin-bottom: 2%;
+	    }
+    .footerSimulatore{
+	    margin-top: 2%;
+		}
+    /*.element{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		width: 90%;
+			}*/
+	    .home1{
+	    height: 100%;
+			background-image: url('applications/11/img/immagine-bambino-home.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			}	
+	.element > div{
+		height: 70px;
+	}
+	.space-div {
+			height: 240px;
+		}
+    .titolo1{
+    font-family: InterstateUltraBlackCondensed;
+	  	font-size: 49px;
+	  	//text-align: center; 
+	  	padding-top: 4%;
+	  	padding-bottom: 4%; 
+	  	padding-left: 5%;
+	  	padding-right: 5%;
+	  	line-height: 60px;
+	  	color: #fff;
+    }
+    .titolo2{
+    font-family: Interstate-LightCondensed;
+    	padding-left: 5%;
+		padding-right: 5%;
+    	font-size: 35px;
+	  //text-align: center;	    
+	  	padding-top: 1%;
+	  	padding-bottom: 1%;
+	  	line-height: 35px;
+	  	color: #fff;
+	  }
+        div#app{
+            margin-top: 70%;
+        }
+
+        ._like{
+               width: 17%;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 5%;
+        }
+
+        .bottoniSimulatore{
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: #001548;
+        }
+        .bottoniSimulatore img{
+	          width: 170%;
+        }
+
+        .materassiSimulatore{
+            padding-top: 11%;
+        }
+
+        .text{
+            height: 87%;
+            //width: 65%;
+            -webkit-overflow-scrolling: touch;
+        }
+		
+    }
+/*NORMAL TABLET*/
+@media (min-width: 768px) and (max-width: 966px){
+    .class_1{
+        background: url(applications/11/img/schede/Nuvola.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_2{
+        background: url(applications/11/img/schede/Elisir.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_3{
+        background: url(applications/11/img/schede/Cover.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_4{
+        background: url(applications/11/img/schede/Aquagel.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_5_zip{
+        background: url(applications/11/img/schede/LadySoft.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_5{
+        background: url(applications/11/img/schede/LadySoftZip.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_6{
+        background: url(applications/11/img/schede/Bios.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_7{
+        background: url(applications/11/img/schede/OblioMP.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_8{
+        background: url(applications/11/img/schede/Dormiglione.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_9{
+        background: url(applications/11/img/schede/Pixel.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_10_zip{
+        background: url(applications/11/img/schede/LadyPiu.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_10{
+        background: url(applications/11/img/schede/LadyPiuZip.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_11{
+        background: url(applications/11/img/schede/Memory.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_11_zip{
+        background: url(applications/11/img/schede/Aquasan.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_12{
+        background: url(applications/11/img/schede/Bliss.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_13{
+        background: url(applications/11/img/schede/OblioAP.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_14{
+        background: url(applications/11/img/schede/Fitness.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_14_zip{
+        background: url(applications/11/img/schede/Marianas.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .text{
+        //margin-left: 35%;
+        color: #001F5B;
+        font-size: 180%;
+        margin-top: 4%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .immagineInfoLordflexs{
+background-image: url('applications/11/img/immagine-bambino-home.png');
+background-size:100% 100%;
+background-repeat: no-repeat;
+    }
+    .immagineInfoSimulatore{
+//background-color: #000;
+background-image: url('applications/11/img/immagine-funzionalita-del-simulatore.png');
+background-size:100% 100%;
+background-repeat: no-repeat;    
+}
+    .viewMobileOk{
+	    display: none;
+    }
+        .doubles{
+            padding-top: 110%;
+            padding-left: 50%;
+        }
+    .testoSimulatore{
+    font-family: Interstate-LightCondensed;
+    	text-align: center;
+	    height: auto;
+	    font-size: 20px;
+	    padding-top: 0%;
+	    padding-bottom: 2%;
+	    color: #fff;
+    }
+    .testoSimulatorePincipale{
+    font-family: Interstate-BoldCondensed;
+	    padding-top: 1%;
+	    padding-bottom: 1%;
+	   text-align: center;
+	    height: auto;
+	    font-size: 27px;
+	    color: #fff; 
+    }
+    .testoSimulatoreFooter{
+	    height: 5%;
+	    font-size: 10px;
+	    color: #fff; 
+    }
+    .brevettoLordflexs{
+	    //background-color: #000;
+		background-image: url('applications/11/img/logo-brevetto-esclusivo.png');
+		height: 35px;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position-x: 50%;
+    }
+    .maxHeight{
+		height: 100%;
+		overflow-y: scroll;   
+   		-webkit-overflow-scrolling: touch;
+   }
+    .Height{
+	    height:90%;
+    }
+    .home2{
+	    background: -webkit-linear-gradient(#284679,#001548);
+	     background: linear-gradient(#284679,#001548);
+	    height: 100%;
+    }
+    	.testoTopBottoni{
+	font-family: InterstateUltraBlackCondensed;
+	color: #fff;
+	font-size: 25pt;
+	text-align: center;
+	line-height: 35px;
+}
+	.materassi div{
+		    padding: 0;
+		    margin: 0;
+		    line-height: 100px !important;
+		    margin-bottom: 2%;
+	    }
+    .footerSimulatore{
+	    margin-top: 2%;
+		}
+    /*.element{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		width: 90%;
+			}*/
+	    .home1{
+	    height: 100%;
+			background-image: url('applications/11/img/immagine-bambino-home.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			}	
+	.element > div{
+		height: 90px;
+	}
+	.space-div {
+			height: 300px;
+		}
+    .titolo1{
+    font-family: InterstateUltraBlackCondensed;
+	  	font-size: 60px;
+	  	//text-align: center; 
+	  	padding-top: 4%;
+	  	padding-bottom: 4%; 
+	  	padding-left: 5%;
+	  	padding-right: 5%;
+	  	line-height: 60px;
+	  	color: #fff;
+    }
+    .titolo2{
+    font-family: Interstate-LightCondensed;
+    	padding-left: 5%;
+		padding-right: 5%;
+    	font-size: 35px;
+	  //text-align: center;	    
+	  	padding-top: 1%;
+	  	padding-bottom: 1%;
+	  	line-height: 35px;
+	  	color: #fff;
+	  }
+        div#app{
+            margin-top: 70%;
+        }
+
+        ._like{
+            width: 35%;
+        }
+
+        .bottoniSimulatore{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: #001548;
+        }
+        .bottoniSimulatore img{
+	        width: 100px;
+        }
+
+        .materassiSimulatore{
+            padding-top: 11%;
+        }
+
+        .text{
+            height: 87%;
+            //width: 65%;
+            -webkit-overflow-scrolling: touch;
+        }
+		
+    }
+/*IPAD*/
+@media (min-width: 967px) and  (max-width: 1199px){
+    .class_1{
+        background: url(applications/11/img/schede/Nuvola.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_2{
+        background: url(applications/11/img/schede/Elisir.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_3{
+        background: url(applications/11/img/schede/Cover.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_4{
+        background: url(applications/11/img/schede/Aquagel.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_5_zip{
+        background: url(applications/11/img/schede/LadySoft.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_5{
+        background: url(applications/11/img/schede/LadySoftZip.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_6{
+        background: url(applications/11/img/schede/Bios.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_7{
+        background: url(applications/11/img/schede/OblioMP.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_8{
+        background: url(applications/11/img/schede/Dormiglione.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_9{
+        background: url(applications/11/img/schede/Pixel.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_10_zip{
+        background: url(applications/11/img/schede/LadyPiu.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_10{
+        background: url(applications/11/img/schede/LadyPiuZip.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_11{
+        background: url(applications/11/img/schede/Memory.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_11_zip{
+        background: url(applications/11/img/schede/Aquasan.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_12{
+        background: url(applications/11/img/schede/Bliss.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_13{
+        background: url(applications/11/img/schede/OblioAP.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_14{
+        background: url(applications/11/img/schede/Fitness.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .class_14_zip{
+        background: url(applications/11/img/schede/Marianas.jpg) no-repeat;
+        background-size: 100%;
+        height: 90%;
+    }
+
+    .text{
+        //margin-left: 35%;
+        color: #001F5B;
+        font-size: 180%;
+        margin-top: 4%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .immagineInfoLordflexs{
+background-image: url('applications/11/img/immagine-bambino-home.png');
+background-size:100% 100%;
+background-repeat: no-repeat;
+    }
+    .immagineInfoSimulatore{
+//background-color: #000;
+background-image: url('applications/11/img/immagine-funzionalita-del-simulatore.png');
+background-size:100% 100%;
+background-repeat: no-repeat;    
+}
+    .viewMobileOk{
+	    display: none;
+    }
+        .doubles{
+            padding-left: 50%;
+            margin-top: -10%;
+        }
+    .testoSimulatore{
+    font-family: Interstate-LightCondensed;
+    	text-align: center;
+	    height: auto;
+	    font-size: 20px;
+	    padding-top: 0%;
+	    padding-bottom: 2%;
+	    color: #fff;
+    }
+    .testoSimulatorePincipale{
+    font-family: Interstate-BoldCondensed;
+	    padding-top: 1%;
+	    padding-bottom: 1%;
+	   text-align: center;
+	    height: auto;
+	    font-size: 27px;
+	    color: #fff; 
+    }
+    .testoSimulatoreFooter{
+	    height: 5%;
+	    font-size: 10px;
+	    color: #fff; 
+    }
+    .brevettoLordflexs{
+	    //background-color: #000;
+		background-image: url('applications/11/img/logo-brevetto-esclusivo.png');
+		height: 35px;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position-x: 50%;
+    }
+    .maxHeight{
+		height: 100%;
+		overflow-y: scroll;   
+   		-webkit-overflow-scrolling: touch;
+   }
+    .Height{
+	    height:90%;
+    }
+    .home2{
+	    background: -webkit-linear-gradient(#284679,#001548);
+	     background: linear-gradient(#284679,#001548);
+	    height: 100%;
+    }
+    	.testoTopBottoni{
+	font-family: InterstateUltraBlackCondensed;
+	color: #fff;
+	font-size: 25pt;
+	text-align: center;
+	line-height: 35px;
+}
+	.materassi div{
+		    padding: 0;
+		    margin: 0;
+		    line-height: 100px !important;
+		    margin-bottom: 2%;
+	    }
+    .footerSimulatore{
+	    margin-top: 2%;
+		}
+    /*.element{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		width: 90%;
+			}*/
+	    .home1{
+	    height: 100%;
+			background-image: url('applications/11/img/immagine-bambino-home.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			}	
+	.element > div{
+		height: 90px;
+	}
+	.space-div {
+			height: 300px;
+		}
+    .titolo1{
+    font-family: InterstateUltraBlackCondensed;
+	  	font-size: 60px;
+	  	//text-align: center; 
+	  	padding-top: 4%;
+	  	padding-bottom: 4%; 
+	  	padding-left: 5%;
+	  	padding-right: 5%;
+	  	line-height: 60px;
+	  	color: #fff;
+    }
+    .titolo2{
+    font-family: Interstate-LightCondensed;
+    	padding-left: 5%;
+		padding-right: 5%;
+    	font-size: 35px;
+	  //text-align: center;	    
+	  	padding-top: 1%;
+	  	padding-bottom: 1%;
+	  	line-height: 35px;
+	  	color: #fff;
+	  }
+        div#app{
+            margin-top: 70%;
+        }
+
+        ._like{
+            width: 35%;
+        }
+
+        .bottoniSimulatore{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: #001548;
+        }
+        .bottoniSimulatore img{
+	        width: 100px;
+        }
+
+        .materassiSimulatore{
+            padding-top: 11%;
+        }
+
+        .text{
+            height: 87%;
+            //width: 65%;
+            -webkit-overflow-scrolling: touch;
+        }
+		
+    }
+/*PORTATILE*/
+@media (min-width: 1200px) and (max-width: 1299px){
+    .class_1{
+        background: url(applications/11/img/schede/Nuvola.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_2{
+        background: url(applications/11/img/schede/Elisir.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_3{
+        background: url(applications/11/img/schede/Cover.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_4{
+        background: url(applications/11/img/schede/Aquagel.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_5_zip{
+        background: url(applications/11/img/schede/LadySoft.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_5{
+        background: url(applications/11/img/schede/LadySoftZip.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_6{
+        background: url(applications/11/img/schede/Bios.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_7{
+        background: url(applications/11/img/schede/OblioMP.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_8{
+        background: url(applications/11/img/schede/Dormiglione.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_9{
+        background: url(applications/11/img/schede/Pixel.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_10_zip{
+        background: url(applications/11/img/schede/LadyPiu.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_10{
+        background: url(applications/11/img/schede/LadyPiuZip.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_11{
+        background: url(applications/11/img/schede/Memory.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_11_zip{
+        background: url(applications/11/img/schede/Aquasan.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_12{
+        background: url(applications/11/img/schede/Bliss.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_13{
+        background: url(applications/11/img/schede/OblioAP.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_14{
+        background: url(applications/11/img/schede/Fitness.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_14_zip{
+        background: url(applications/11/img/schede/Marianas.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .text{
+        //margin-left: 35%;
+        color: #001F5B;
+        font-size: 180%;
+        margin-top: 4%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .immagineInfoLordflexs{
+background-image: url('applications/11/img/immagine-bambino-home.png');
+background-size:100% 100%;
+background-repeat: no-repeat;
+    }
+    .immagineInfoSimulatore{
+//background-color: #000;
+background-image: url('applications/11/img/immagine-funzionalita-del-simulatore.png');
+background-size:100% 100%;
+background-repeat: no-repeat;    
+}
+    .viewMobileOk{
+	    display: none;
+    }
+        .doubles{
+            padding-left: 50%;
+            margin-top: -10%;
+        }
+    .testoSimulatore{
+    font-family: Interstate-LightCondensed;
+    	text-align: center;
+	    height: auto;
+	    font-size: 20px;
+	    padding-top: 0%;
+	    padding-bottom: 2%;
+	    color: #fff;
+    }
+    .testoSimulatorePincipale{
+    font-family: Interstate-BoldCondensed;
+	    padding-top: 1%;
+	    padding-bottom: 1%;
+	   text-align: center;
+	    height: auto;
+	    font-size: 27px;
+	    color: #fff; 
+    }
+    .testoSimulatoreFooter{
+	    height: 5%;
+	    font-size: 10px;
+	    color: #fff; 
+    }
+    .brevettoLordflexs{
+	    //background-color: #000;
+		background-image: url('applications/11/img/logo-brevetto-esclusivo.png');
+		height: 35px;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position-x: 50%;
+    }
+    .maxHeight{
+		height: 100%;
+		overflow-y: scroll;   
+   		-webkit-overflow-scrolling: touch;
+   }
+    .Height{
+	    height:90%;
+    }
+    .home2{
+	    background: -webkit-linear-gradient(#284679,#001548);
+	     background: linear-gradient(#284679,#001548);
+	    height: 100%;
+    }
+    	.testoTopBottoni{
+	font-family: InterstateUltraBlackCondensed;
+	color: #fff;
+	font-size: 25pt;
+	text-align: center;
+	line-height: 35px;
+}
+	.materassi div{
+		    padding: 0;
+		    margin: 0;
+		    line-height: 100px !important;
+		    margin-bottom: 2%;
+	    }
+    .footerSimulatore{
+	    margin-top: 2%;
+		}
+    /*.element{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		width: 90%;
+			}*/
+	    .home1{
+	    height: 100%;
+			background-image: url('applications/11/img/immagine-bambino-home.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			}	
+	.element > div{
+		height: 90px;
+	}
+	.space-div {
+			height: 300px;
+		}
+    .titolo1{
+    font-family: InterstateUltraBlackCondensed;
+	  	font-size: 60px;
+	  	//text-align: center; 
+	  	padding-top: 4%;
+	  	padding-bottom: 4%; 
+	  	padding-left: 5%;
+	  	padding-right: 5%;
+	  	line-height: 60px;
+	  	color: #fff;
+    }
+    .titolo2{
+    font-family: Interstate-LightCondensed;
+    	padding-left: 5%;
+		padding-right: 5%;
+    	font-size: 35px;
+	  //text-align: center;	    
+	  	padding-top: 1%;
+	  	padding-bottom: 1%;
+	  	line-height: 35px;
+	  	color: #fff;
+	  }
+        div#app{
+            margin-top: 70%;
+        }
+
+        ._like{
+            width: 35%;
+        }
+
+        .bottoniSimulatore{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: #001548;
+        }
+        .bottoniSimulatore img{
+	        width: 100px;
+        }
+
+        .materassiSimulatore{
+            padding-top: 11%;
+        }
+
+        .text{
+            height: 87%;
+            //width: 65%;
+            -webkit-overflow-scrolling: touch;
+        }
+		
+    }
+/*DESKTOP*/
+@media (min-width: 1300px){
+    .class_1{
+        background: url(applications/11/img/schede/Nuvola.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_2{
+        background: url(applications/11/img/schede/Elisir.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_3{
+        background: url(applications/11/img/schede/Cover.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_4{
+        background: url(applications/11/img/schede/Aquagel.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_5_zip{
+        background: url(applications/11/img/schede/LadySoft.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_5{
+        background: url(applications/11/img/schede/LadySoftZip.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_6{
+        background: url(applications/11/img/schede/Bios.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_7{
+        background: url(applications/11/img/schede/OblioMP.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_8{
+        background: url(applications/11/img/schede/Dormiglione.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_9{
+        background: url(applications/11/img/schede/Pixel.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_10_zip{
+        background: url(applications/11/img/schede/LadyPiu.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_10{
+        background: url(applications/11/img/schede/LadyPiuZip.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_11{
+        background: url(applications/11/img/schede/Memory.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_11_zip{
+        background: url(applications/11/img/schede/Aquasan.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_12{
+        background: url(applications/11/img/schede/Bliss.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_13{
+        background: url(applications/11/img/schede/OblioAP.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_14{
+        background: url(applications/11/img/schede/Fitness.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .class_14_zip{
+        background: url(applications/11/img/schede/Marianas.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .text{
+        //margin-left: 35%;
+        color: #001F5B;
+        font-size: 180%;
+        margin-top: 4%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .immagineInfoLordflexs{
+background-image: url('applications/11/img/immagine-bambino-home.png');
+background-size:100% 100%;
+background-repeat: no-repeat;
+    }
+    .immagineInfoSimulatore{
+//background-color: #000;
+background-image: url('applications/11/img/immagine-funzionalita-del-simulatore.png');
+background-size:100% 100%;
+background-repeat: no-repeat;    
+}
+    .viewMobileOk{
+	    display: none;
+    }
+        .doubles{
+            padding-left: 50%;
+            margin-top: -10%;
+        }
+    .testoSimulatore{
+    font-family: Interstate-LightCondensed;
+    	text-align: center;
+	    height: auto;
+	    font-size: 20px;
+	    padding-top: 0%;
+	    padding-bottom: 2%;
+	    color: #fff;
+    }
+    .testoSimulatorePincipale{
+    font-family: Interstate-BoldCondensed;
+	    padding-top: 1%;
+	    padding-bottom: 1%;
+	   text-align: center;
+	    height: auto;
+	    font-size: 27px;
+	    color: #fff; 
+    }
+    .testoSimulatoreFooter{
+	    height: 5%;
+	    font-size: 10px;
+	    color: #fff; 
+    }
+    .brevettoLordflexs{
+	    //background-color: #000;
+		background-image: url('applications/11/img/logo-brevetto-esclusivo.png');
+		height: 35px;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position-x: 50%;
+    }
+    .maxHeight{
+		height: 100%;
+		overflow-y: scroll;   
+   		-webkit-overflow-scrolling: touch;
+   }
+    .Height{
+	    height:90%;
+    }
+    .home2{
+	    background: -webkit-linear-gradient(#284679,#001548);
+	     background: linear-gradient(#284679,#001548);
+	    height: 100%;
+    }
+    	.testoTopBottoni{
+	font-family: InterstateUltraBlackCondensed;
+	color: #fff;
+	font-size: 25pt;
+	text-align: center;
+	line-height: 35px;
+}
+	.materassi div{
+		    padding: 0;
+		    margin: 0;
+		    line-height: 100px !important;
+		    margin-bottom: 2%;
+	    }
+    .footerSimulatore{
+	    margin-top: 2%;
+		}
+    /*.element{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		width: 90%;
+			}*/
+	    .home1{
+	    height: 100%;
+			background-image: url('applications/11/img/immagine-bambino-home.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			}	
+	.element > div{
+		height: 90px;
+	}
+	.space-div {
+			height: 300px;
+		}
+    .titolo1{
+    font-family: InterstateUltraBlackCondensed;
+	  	font-size: 60px;
+	  	//text-align: center; 
+	  	padding-top: 4%;
+	  	padding-bottom: 4%; 
+	  	padding-left: 5%;
+	  	padding-right: 5%;
+	  	line-height: 60px;
+	  	color: #fff;
+    }
+    .titolo2{
+    font-family: Interstate-LightCondensed;
+    	padding-left: 5%;
+		padding-right: 5%;
+    	font-size: 35px;
+	  //text-align: center;	    
+	  	padding-top: 1%;
+	  	padding-bottom: 1%;
+	  	line-height: 35px;
+	  	color: #fff;
+	  }
+        div#app{
+            margin-top: 70%;
+        }
+
+        ._like{
+            width: 35%;
+        }
+
+        .bottoniSimulatore{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            background-color: #001548;
+        }
+        .bottoniSimulatore img{
+	        width: 100px;
+        }
+
+        .materassiSimulatore{
+            padding-top: 11%;
+        }
+
+        .text{
+            height: 87%;
+            //width: 65%;
+            -webkit-overflow-scrolling: touch;
+        }
+		
+    }
+</style>
+
+<div id="ApioApplication11" ng-app="ApioApplication11" class="maxHeight mobileSmartphone" href="#top">
+<div class="avvisoSmartphone">LORDFLEX'S sta lavorando per costruire un interfaccia grafica dedicata a tutti gli Smartphone, in questo momeno l'App è raggiungibile solo da Table! Grazie!</div>
+    <div ng-controller="defaultController" class="container-fluid" style="height:100%; padding:0;" >
+        <div ng-show="!isPortrait() && !showSimulatore && !showFunzionalita && !showInfo" class="application" style="padding:0;">
+            <div class="col-md-6 col-sm-6 home1 viewMobile" ></div>
+            <div class="col-md-6 col-sm-6 home2" >
+                <div >
+                    <div id="app">
+                        <div class="row space-div">
+                        	<div class="titolo1">SIMULATORE DI PORTANZA</div>
+                        	<div class="titolo2">scegli il materasso ideale per il tuo riposo</div>
+                        </div>
+                        <div class="element">
+                            <div class="info" ng-click="showInformation()"></div>
+                        </div>
+                        <div class="element">
+                            <div class="funzionalita" ng-click="showFunctionality()"></div>
+                        </div>
+                        <div class="element">
+                            <div class="simulatore" ng-click="showSimulator()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-controller="controllerInfo" class="container-fluid maxHeight" ng-show="!isPortrait() && showInfo && !showSimulatore" style="padding: 0;">
+            <div class="container-fluid Height">
+                <div class="row bottoniSimulatore">
+                	<div class="col-md-2 col-sm-2 col-xs-2">
+                    <img style="float:left;" class="margin-top-mobile" src="applications/11/img/home.png" ng-click="tornaAllaHome()" />
+                	</div>
+                	<div class="col-md-8 col-sm-8 testoTopBottoni col-xs-8 viewMobileOk"></div>
+                	<div class="col-md-8 col-sm-8 testoTopBottoni col-xs-8 viewMobile">INFO SU LORDFLEX'S</div>
+                	<div class="col-md-2 col-sm-2 col-xs-2">
+                    <img style="float:right;" class="margin-top-mobile" src="applications/11/img/simulator.png" ng-click="mostraSimulatore()"/>
+                	</div>
+                </div>
+                <div class="row maxHeight">
+                	<div class="col-md-5 col-sm-5 immagineInfoLordflexs maxHeight">
+	                	
+                	</div>
+                    <div class="col-md-7 col-sm-7 text">
+                        <p><b>LORDFLEX’S</b> è un marchio storico per la produzione di materassi e sistemi letto di qualità. Un’Azienda, attiva da circa 50 anni, è tra le poche nel settore, a vantare una simile longevità e continuità storica. Un lavoro fatto di ricerca, innovazione tecnica, brevetti esclusivi e soluzioni estetiche che hanno portato l’Azienda ad allargare la propria struttura organizzativa e ad acquisire un’immagine di qualità produttiva riconosciuta anche a livello internazionale.</p>
+                        <p>Oggi <b>LORDFLEX’S</b> dispone di un’ampia copertura commerciale del territorio Italiano. È presente in vari Paesi Europei e non, con Concessionari esclusivisti. I prodotti realizzati ed i materiali impiegati sono rigorosamente Made in Italy. L’intera filiera produttiva viene eseguita totalmente nel proprio stabilimento di Serra de’ Conti (AN).</p>
+                        <p>Una “Fabbrica del Benessere” in grado di offrire qualunque soluzione di riposo. La gamma prodotti comprende materassi a molle e molle indipendenti, molle memory, lattice e crine, aquaGel, schiumati a lenta memoria, con tessuti tecnici, <b>reti</b> in faggio o metallo, <b>letti</b> imbottiti, guanciali, <b>accessori</b> oltre ad <b>articoli contract</b> certificati per hotel e strutture ricettive.</p>
+                        <p>Una collezione prodotti estremamente specializzata, certificata e soprattutto completa di <b>articoli esclusivi e <u>brevettati</u></b>, derivanti da una spiccata propensione aziendale all’innovazione ed alla ricerca.</p>
+                        <p>I materiali impiegati per la realizzazione degli articoli subiscono un processo di selezione secondo rigidi standard qualitativi. Tutte le fibre tessili e le imbottiture sono assolutamente di origine naturali (Canapa, Pura lana Vergine, Cotone, tessuti tecnici in Argento, antibatterici ed antimagnetici) <b>per garantire il massimo comfort ergonomico, termico ed igienico</b>.</p>
+                        <p>LORDFLEX'S è una delle Aziende selezionate dal <b>Consorzio Produttori Materassi di Qualità</b> il quale certifica materassi che superano severe prove di durata ed affidabilità a garanzia del Cliente finale.</p>
+                        <p>Oggi LORDFLEX’S rappresenta un <b>marchio pubblicizzato</b> sia su riviste specializzate che attraverso <b>campagne pubblicitarie televisive sui canali nazionali.</b></p>
+                        <p>Da tempo LORDFLEX’S ha ottenuto la certificazione di qualità ISO 9001 del proprio sistema produttivo.</p>
+                        <p>Il presente Simulatore di Portanze è un dispositivo brevettato da LORDFLEX’S ed è frutto di un progetto di ricerca Aziendale. Una novità assoluta ed un’esclusiva LORDFLEX’S in Italia e nel Mondo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-controller="controllerFunzionalita" class="container-fluid maxHeight" ng-show="!isPortrait() && showFunzionalita && !showSimulatore" style=" padding: 0;">
+            <div class="container-fluid Height">
+                <div class="row bottoniSimulatore">
+                    <div class="col-xs-2 col-md-2 col-sm-2">
+                    <img style="float:left;" class="margin-top-mobile" src="applications/11/img/home.png" ng-click="tornaAllaHome()" />
+                    
+                	</div>
+                	<div class="col-md-8 col-sm-8 testoTopBottoni col-xs-8 viewMobileOk"></div>
+                	<div class="col-xs-8 col-md-8 col-sm-8 testoTopBottoni viewMobile">FUNZIONALITA' DEL SIMULATORE</div>
+                	<div class="col-md-2 col-xs-2 col-sm-2">
+                    <img style="float:right;" class="margin-top-mobile" src="applications/11/img/simulator.png" ng-click="mostraSimulatore()"/>
+                	</div>                </div>
+                <div class="row maxHeight">
+                	<div class="col-md-5 col-sm-5 immagineInfoSimulatore maxHeight">
+	                	
+                	</div>
+                    <div class="col-md-7 col-sm-7 text">
+                        <p>Il <b>SIMULATORE DI PORTANZE</b> rappresenta una nuova e “rivoluzionaria” strumentazione che consente di riprodurre esattamente le percezioni di comfort dei principali materassi della gamma LORDFLEX’S.</p>
+                        <p>Il <b>SIMULATORE DI PORTANZE</b> è una tecnologia progettata, sviluppata e brevettata da LORDFLEX’S. L’apparato ha ottenuto la certificazione dal COSMOB, autorevole ed accreditato laboratorio prove. Una novità assoluta ed un’esclusiva LORDFLEX’S in Italia e nel Mondo.</p>
+                        <p>Premendo su questo Touch Screen i tasti abbinati ai vari prodotti, <b>la postazione riprodurrà il comfort dei reali materassi ovvero simulerà esattamente la portanza e la sensazione effettiva corrispondente al prodotto di volta in volta selezionato.</b></p>
+                        <p>Infatti, digitando un prodotto, speciali meccanismi interni al dispositivo produrranno pressioni variabili dal basso verso la superficie di riposo così da sperimentare il variare della rigidità e del comfort in funzione al materasso selezionato.</p>
+                        <p>Un’ampia scelta di prodotti in una sola postazione prova. Una tecnologia inesistente fino ad oggi, unica al mondo, esclusiva di LORDFLEX’S, che rende semplice e consapevole scegliere il materasso più adatto alle proprie ed individuali esigenze di riposo affinché ognuno possa migliorare, con il giusto materasso, il proprio benessere e la propria salute.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-controller="controllerSimulatore" class="container-fluid" ng-show="!isPortrait() && showSimulatore" style="height: 100%; padding: 0;">
+            <div class="container-fluid backgroundSimulatore maxHeight" ng-show="showSchede === 0">
+                <div class="row bottoniSimulatore">
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                    <img style="float:left;" class="margin-top-mobile" src="applications/11/img/home.png" ng-click="tornaAllaHome()" />
+                	</div>
+                	<div class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni viewMobile">SIMULATORE DI PORTANZA</div>
+                	<div class="col-md-2 col-sm-2 col-xs-2">
+
+                	</div>
+                </div>
+                <div class="row viewMobileOk"><div style="width: 100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 1%;
+                    padding: 0;"><img style="width: 100px;" src="applications/11/img/logo-brevetto-esclusivo.png" /></div></div>
+                <div class="row testoSimulatorePincipale">PROVA IL DIVERSO COMFORT DEI PRINCIPALI PRODOTTI LORDFLEX'S</div>
+                <div class="row testoSimulatore viewMobile">Premi i tasti corrispondenti ai vari modelli ed individua il materasso che ti offre la migliore sensazione</div>
+                <div class="row contenitoreMaterassi">
+                    <property propertyname="materassi" class="materassi" listener="send()">
+                        <div ng-repeat="m in materassi" class="col-md-3 col-sm-3 col-xs-12" ng-class="{'rowMaterassi' : $index % 2 == 0, 'rowMaterassiBackDispari' : $index % 2 != 0}" ng-click="setIndex(m)">
+                            
+                            <img id="materassi{{$index}}" ng-if="!isMobile()" ng-show="getIndex(m) == object.properties.materassi" class="img materassiImg col-md-6 col-sm-6 col-xs-3" ng-src="applications/11/img/{{normalize(m)}}_clicked.png?cb=124987812" />
+                            <img id="materassi{{$index}}" ng-if="isMobile()" ng-show="getIndex(m) == object.properties.materassi" class="mobile_clicked img materassiImg col-md-6 col-sm-6 col-xs-3" ng-src="applications/11/img/{{normalize(m)}}.png?cb=124987812" />
+                            <img ng-hide="getIndex(m) == object.properties.materassi" class="img materassiImg col-md-6 col-sm-6 col-xs-3" ng-src="applications/11/img/{{normalize(m)}}.png?cb=124987812" />
+                            <div class="col-xs-4 viewMobileOk testoBottoniMaterassi">{{splitMaterasso(m)[1] ? splitMaterasso(m)[0]+" / "+splitMaterasso(m)[1] : splitMaterasso(m)[0]}}</div>
+                            <img ng-show="object.properties.like{{$index}} == '0'" class="_like materassiImg col-md-6 col-sm-6 col-xs-3" ng-click="setLike($index)" ng-src="applications/11/img/like.png?cb=124987812" />
+                            <img ng-show="object.properties.like{{$index}} == '1'" class="_like materassiImg col-md-6 col-sm-6 col-xs-3" ng-click="setLike($index)" ng-src="applications/11/img/like_clicked.png?cb=124987812" />
+                            <div class="col-xs-2 viewMobileOk " ng-click="schedeProdotto($index)">
+                            	<div class="schedaTecnica col-xs-6">
+                            	SCHEDA TECNICA
+                            	</div>
+                            	<div class="col-xs-6 frecciaMaterassi">
+                            	>
+                            	</div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 viewMobile" ng-click="schedeProdotto()">
+                            
+                            <img class="img materassiImg col-md-6 col-sm-6 col-xs-3" src="applications/11/img/scheda_prodotto.png"/>
+                            <img class="_like materassiImg col-md-6 col-sm-6 col-xs-3" />
+                           
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 viewMobileOk" ng-click="reset()">
+                            <div class="nuovaProvaMobile">NUOVA PROVA</div>
+                            <div class="testoSimulatoreFooterMobile">
+                                La sensazione percepita nella simulazione di ogni materasso corrisponde esattamente alla reale caratteristica di ogni singolo prodotto indicato se abbinato ad una rete a listelli di buona qualità o ad una base d'appoggio non soffice o affossata.
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 viewMobile" ng-click="reset()">
+                            
+                            <img class="img materassiImg col-md-6 col-sm-6 col-xs-3" src="applications/11/img/reset.png"/>
+                            <img class="_like materassiImg col-md-6 col-sm-6 col-xs-3" />
+                            
+                        </div>
+                    </property>
+                </div>
+                <div class="row footerSimulatore viewMobile">
+                	<div class="col-md-2 col-xs-2 col-sm-2 brevettoLordflexs"></div>
+                	<div class="col-sm-10 col-xs-10 col-md-10 testoSimulatoreFooter">
+                La sensazione percepita nella simulazione di ogni materasso corrisponde esattamente alla reale caratteristica di ogni singolo prodotto indicato se abbinato ad una rete a listelli di buona qualità o ad una base d'appoggio non soffice o affossata.
+                	</div>
+                </div>
+            </div>
+            <!-- VERSIONE 0
+            <div ng-repeat="m in materassi" class="class_{{$index+1}}" ng-show="showSchede === {{$index+1}}">
+                <div class="row bottoniSimulatore no-margin-right">
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                	<div ng-if="!flagName" class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[0]}}</div>
+                    <div ng-if="flagName" class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[1]}}</div>
+                	<div class="col-md-2 col-sm-2 col-xs-2">
+                        <img style="float:right;" class="margin-top-mobile" src="applications/11/img/simulator.png" ng-click="mostraSimulatore()"/>
+                	</div>
+                </div>
+                <div class="doubles viewMobile" ng-show="showSchede === 5 || showSchede === 10 || showSchede === 11 || showSchede === 14">
+                    <img class="space-left-previous" src="applications/11/img/indietro.png" ng-click="showFirstDouble($index+1)">
+                    <img class="space-left-forward" src="applications/11/img/avanti.png" ng-click="showSecondDouble($index+1)">
+                </div>
+            </div>-->
+            <!-- VERSIONE 1
+            <div ng-repeat="m in materassi" class="maxHeight" ng-show="showSchede === {{$index+1}}">
+                <div class="row bottoniSimulatore no-margin-right">
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div ng-if="!flagName" class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[0]}}</div>
+                    <div ng-if="flagName" class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[1]}}</div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <img style="float:right;" class="margin-top-mobile" src="applications/11/img/simulator.png" ng-click="mostraSimulatore()"/>
+                    </div>
+                </div>
+                <div class="class_{{$index+1}}"></div>
+                <div class="doubles viewMobile" ng-show="showSchede === 5 || showSchede === 10 || showSchede === 11 || showSchede === 14">
+                    <img class="space-left-previous" src="applications/11/img/indietro.png" ng-click="showFirstDouble($index+1)">
+                    <img class="space-left-forward" src="applications/11/img/avanti.png" ng-click="showSecondDouble($index+1)">
+                </div>
+            </div>-->
+            <div ng-repeat="m in materassi" ng-show="showSchede === {{$index+1}}">
+                <div class="row bottoniSimulatore no-margin-right">
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div ng-if="!flagName" class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[0].indexOf("Bliss") > -1 ? "Bliss" : splitMaterasso(m)[0]}}</div>
+                    <div ng-if="flagName" class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[1]}}</div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <img style="float:right;" class="margin-top-mobile" src="applications/11/img/simulator.png" ng-click="mostraSimulatore()"/>
+                    </div>
+                </div>
+                <img id="schedeMaterassi{{$index+1}}" class="viewMobile" width="100%" src="applications/11/img/schede/{{camelize(m)[0]}}.jpg" />
+                <img id="schedeMaterassi{{$index+1}}" class="viewMobileOk" width="100%" src="applications/11/img/schedeMobile/{{camelize(m)[0]}}.png" />
+                <div class="doubles viewMobile" ng-show="showSchede === 5 || showSchede === 10 || showSchede === 11 || showSchede === 14">
+                    <img class="space-left-previous" style="display: none;" src="applications/11/img/indietro.png" ng-click="showFirstDouble($index+1)">
+                    <img class="space-left-forward" src="applications/11/img/avanti.png" ng-click="showSecondDouble($index+1)">
+                </div>
+            </div>
+
+            <div ng-repeat="m in materassi" class="viewMobileOk" ng-show="showSchede === {{$index+1}} && (showSchede === 5 || showSchede === 10 || showSchede === 11 || showSchede === 14)">
+                <div class="row bottoniSimulatore no-margin-right">
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[1]}}</div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                </div>
+                <img id="schedeMaterassi{{$index+1}}" width="100%" src="applications/11/img/schedeMobile/{{camelize(m)[1]}}.png" />
+            </div>
+
+            <!--<div ng-repeat="m in materassi" class="class_{{$index+1}}_zip viewMobileOk" ng-show="showSchede === {{$index+1}} && (showSchede === 5 || showSchede === 10 || showSchede === 11 || showSchede === 14)">
+                <div class="row bottoniSimulatore no-margin-right">
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-8 col-sm-8 col-xs-8 testoTopBottoni" style="text-transform: uppercase;">{{splitMaterasso(m)[1]}}</div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <img style="float:right;" class="margin-top-mobile" src="applications/11/img/simulator.png" ng-click="mostraSimulatore()"/>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<script src="applications/11/11.js"></script>

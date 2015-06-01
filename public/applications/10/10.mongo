@@ -1,0 +1,1 @@
+{"name":"Myo","objectId":"10","protocol":"l","address":"11111","properties":{"wavein":"0","waveout":"0","fist":"0","fingerspread":"0"},"notifications":{"wavein":{"1":"Wave In"},"waveout":{"1":"Wave Out"},"fist":{"1":"Fist"},"fingerspread":{"1":"Fingers Spread"}},"db":{}}
