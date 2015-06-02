@@ -1,0 +1,145 @@
+<section id="newApp" class="tab-pane">
+<!--Copyright 2014-2015 Alex Benfaremo, Alessandro Chelli, Lorenzo Di Berardino, Matteo Di Sabatino-->
+
+<!---------------------------------- LICENSE -------------------------------
+-									 -
+- This file is part of ApioOS.						 -
+-									 -
+- ApioOS is free software released under the GPLv2 license: you can	 -
+- redistribute it and/or modify it under the terms of the GNU General	 -
+- Public License version 2 as published by the Free Software Foundation. -
+-									 -
+- ApioOS is distributed in the hope that it will be useful, but		 -
+- WITHOUT ANY WARRANTY; without even the implied warranty of		 -
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the		 -
+- GNU General Public License version 2 for more details.		 -
+-									 -
+- To read the license either open the file COPYING.txt or		 -
+- visit <http://www.gnu.org/licenses/gpl2.txt>				 -
+-									 -
+-------------------------------------------------------------------------->
+
+
+    <h3>Restore Database</h3>
+    <div class="row">
+      <p>________________________________________________________________________________________________________________________________________</p>
+      <p> </p>
+      <p></p>
+    </div>
+    <div class="">
+        <div class="row">
+          <div class="col-md-3">
+              <h3>From Data Folder</h3>
+          </div>
+          <div class="col-md-6">
+              <div class="row">
+                  <label for="officialRepoPath" class="col-sm-5 control-label"></label>
+                  <div class="input-group col-sm-10" style="margin-left:15px">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" style= "margin-top:12px" type="button" ng-click="mongoRestore()">Restore</button>
+                    </span>
+                  </div><!-- /input-group -->
+              </div>
+          </div><!-- /.col-lg-6 -->
+
+          <div id="modalRestore" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+
+                  <h4 class="modal-title">Restoring Database</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Restoring  Apio Database from Local Data Folder. Please wait.</p>
+                </div>
+                <div class="modal-footer">
+                 <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                  -->
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+      </div>
+        <div class="row">
+          <p>________________________________________________________________________________________________________________________________________</p>
+          <p> </p>
+          <p></p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>From Github</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <label for="officialRepoPath" class="col-sm-5 control-label">Link to Apio Database</label>
+                    <div class="input-group col-sm-10" style="margin-left:15px">
+                      <input ng-model="gitPath" type="text" class="form-control" placeholder="Path to Github repo" id="officialRepoPath">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="gitMongoImport(gitPath)">Import</button>
+                      </span>
+                    </div><!-- /input-group -->
+                </div>
+            </div><!-- /.col-lg-6 -->
+
+            <div id="modalGitClone" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+
+                    <h4 class="modal-title">Restoring Database</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Restoring  Apio Database from the repo {{gitPath}}. Please wait.</p>
+                  </div>
+                  <div class="modal-footer">
+                   <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    -->
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
+        <div class="row">
+          <p>________________________________________________________________________________________________________________________________________</p>
+          <p> </p>
+          <p></p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Backup Database</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <label for="officialRepoPath" class="col-sm-5 control-label"></label>
+                    <div class="input-group col-sm-10" style="margin-left:15px">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" style= "margin-top:12px" type="button" ng-click="backupDatabase()">Backup</button>
+                      </span>
+                    </div><!-- /input-group -->
+                </div>
+            </div><!-- /.col-lg-6 -->
+
+            <div id="modalRestore" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+
+                    <h4 class="modal-title">Making the Backup</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>  Apio Database Backup. Please wait.</p>
+                  </div>
+                  <div class="modal-footer">
+                   <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    -->
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+
+
+      </div>
+</section>

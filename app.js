@@ -651,6 +651,15 @@ app.post('/apio/app/maximumId', routes.dashboard.maximumIdApioApp);
 /* APIO clone from the git repo of a standard Apio App*/
 app.post('/apio/app/gitCloneApp', routes.dashboard.gitCloneApp);
 
+/* APIO restore Database from local file  in data folder*/
+app.post('/apio/app/mongoRestore', routes.dashboard.mongoRestore);
+
+/* APIO restore Database from mongo repo*/
+app.post('/apio/app/gitCloneMongo', routes.dashboard.mongoRestore);
+
+/* APIO backup Database Apio*/
+app.post('/apio/app/backupDatabase', routes.dashboard.backupDatabase);
+
 /* APIO delete of the App */
 app.post('/apio/app/delete', routes.dashboard.deleteApioApp);
 
@@ -941,7 +950,7 @@ Apio.io.on("connection", function(socket){
                         })
                     })
 
-                
+
     });
 
 });

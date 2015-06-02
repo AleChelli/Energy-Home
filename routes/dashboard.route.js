@@ -25,6 +25,10 @@ var formidable = require('formidable');
 var ncp = require('ncp').ncp;
 var Apio = require("../apio.js");
 var clone = require('git-clone');
+var sys = require('sys')
+var exec = require('child_process').exec;
+
+var child;
 
 var deleteFolderRecursive = function(path) {
     console.log('deleting the directory '+path);
@@ -100,7 +104,7 @@ module.exports = {
 	    		else{
 
 	    			if(req.body.hasOwnProperty('adapter')){
-						fs.writeFileSync(path+'/'+dummy+'/adapter.js',req.body.adapter);	    		
+						fs.writeFileSync(path+'/'+dummy+'/adapter.js',req.body.adapter);
 			    	}
 
 		    		fs.writeFileSync('public/applications/'+newId+'/_' + newId + '/_' + newId + '.ino',ino);
@@ -114,7 +118,7 @@ module.exports = {
 			    }
 	    	})
 	    }
-	   
+
 	},
 	folderApioApp : function(req,res){
 		var id = req.body.id;
@@ -151,7 +155,7 @@ module.exports = {
 	    object.makefile = fs.readFileSync(path+'/Makefile', {encoding: 'utf8'});
 	    console.log('GUARDA QUAAAAAA')
 	    console.log(object.makefile)
-	    
+
 	    /*console.log('js:\n'+object.js);
 	    console.log('html:\n'+object.html);
 	    console.log('json:\n'+object.json);
@@ -167,7 +171,7 @@ module.exports = {
 	    var ino = req.body.ino;
 	    var html = req.body.html;
 	    var js = req.body.js;
-	    var makefile = req.body.makefile;    
+	    var makefile = req.body.makefile;
 
 	    console.log('APIO: Creating application ' + obj.objectId);
 	    fs.mkdirSync("public/applications/" + obj.objectId);
@@ -187,7 +191,7 @@ module.exports = {
 	        }else{
 	            res.send();
 	        }
-	    });   
+	    });
 
 	},
 	createNewApioApp : function(req,res){
@@ -213,7 +217,7 @@ module.exports = {
 
 	    for (var key in obj.properties){
 	        console.log('key : '+key);
-	        if(obj.properties[key].type!=='List'){ 
+	        if(obj.properties[key].type!=='List'){
 
 	        	if(obj.properties[key].type==='Sensor')
 	        		SensorInProperties = 1;
@@ -228,7 +232,7 @@ module.exports = {
 	                //bisognerebbe far settare la voce della select che vogliono come prima voce attraverso il wizard
 	                for(var k in o) return k;
 	            }
-	  
+
 
 	        	console.log('obj.properties[key].name: ' + obj.properties[key].name);
 	            console.log('obj.properties[key].firstItemValue: ' + returnFirstListItemValue(obj.properties[key].items));
@@ -242,7 +246,7 @@ module.exports = {
 	            console.log('objectToSave.properties[obj.properties[key].name]: ' + objectToSave.properties[obj.properties[key].name]);*/
 	        }
 	        console.log();
-	    }; 
+	    };
 
 	    //objectToSave.db=JSON.parse(mongo.slice(7,mongo.length)); //problema db : { db : { ... }}
 	    console.log('mongo: '+mongo);
@@ -269,7 +273,7 @@ module.exports = {
 	            fs.writeFileSync('public/applications/'+obj.objectId+'/' + obj.objectId + '.mongo',mongo);
 	            fs.writeFileSync('public/applications/'+obj.objectId+'/icon.png',decodeBase64Image(icon).data);
 	            //fs.writeFileSync('public/applications/'+obj.objectId+'/' + obj.objectId + '.json',JSON.stringify(objectToSave));
-	            
+
 	            //Injection of the libraries file in the sketch folder
 	            var source = 'public/arduino/';
 	            console.log('obj.protocol: '+ obj.protocol);
@@ -311,7 +315,7 @@ module.exports = {
 
 	            res.send();
 	        }
-	    });   
+	    });
 
 	},
 	exportApioApp : function(req,res){
@@ -338,12 +342,12 @@ module.exports = {
 	    //jsonObject = JSON.parse(object.json);
 	    jsonObject = JSON.parse(object.mongo);
 	    console.log('jsonObject.name: '+jsonObject.name);
-	    
+
 	    //TO FIX: MAKE REPLACE RECURSIVE
 	    object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	    object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	    object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
-	    
+
 	    object.html=object.html.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	    object.html=object.html.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	    object.html=object.html.replace('applications/'+id+'/'+id+'.js','applications/'+dummy+'/'+dummy+'.js');
@@ -361,7 +365,7 @@ module.exports = {
 	        fs.mkdirSync(path +'/'+ dummy);
 	        fs.mkdirSync(path +'/'+ dummy + '/_' + dummy);
 	    	if(object.hasOwnProperty('adapter')){
-				fs.writeFileSync(path+'/'+dummy+'/adapter.js',object.adapter);	    		
+				fs.writeFileSync(path+'/'+dummy+'/adapter.js',object.adapter);
 	    	}
 	        fs.writeFileSync(path+'/'+dummy+'/icon.png',object.icon);
 	        fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.html',object.html);
@@ -370,9 +374,9 @@ module.exports = {
 	        fs.writeFileSync(path+'/'+dummy+'/_' + dummy + '/_' + dummy + '.ino',object.ino);
 	        fs.writeFileSync(path+'/'+dummy+'/_' + dummy + '/Makefile',object.makefile);
 	        //fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.json',object.json);
-	 
+
 	        //var compress = new targz().compress('/applications/:id', '/applications/temp/:id.tar.gz', function(err){
-	        
+
 	        var compress = new targz().compress(path +'/'+ dummy, path+'/'+jsonObject.name+'.tar.gz', function(err){
 	            if(err)
 	                console.log(err);
@@ -396,13 +400,13 @@ module.exports = {
 	        console.log(e);
 	        return;
 	    }
-	
+
 	},
 	exportInoApioApp : function(req,res){
 	    console.log('/apio/app/exportIno')
 	    var obj = {};
 	    obj.objectId = req.query.id;
-	    
+
 	    try {
 	            var compress = new targz().compress("public/applications/" + obj.objectId +'/_' + obj.objectId, "public/applications/" + obj.objectId +'/' + obj.objectId +'.tar.gz', function(err){
 	                if(err)
@@ -431,7 +435,7 @@ module.exports = {
 	        console.log(e);
 	        return;
 	    }
-	    
+
 	},
 	deleteApioApp : function(req,res){
 	    var id = req.body.id;
@@ -449,14 +453,14 @@ module.exports = {
 	        }
 
 	    })
-	    
+
 	},
 	uploadApioApp : function(req,res){
 	    console.log('/apio/app/upload')
-	    
+
 	    deleteFolderRecursive('upload');
 	    fs.mkdirSync('upload');
-	    
+
 	    var form = new formidable.IncomingForm();
 	        form.uploadDir = "upload";
 	        form.keepExtensions = true;
@@ -503,12 +507,12 @@ module.exports = {
 
 	                        var dummy = (parseInt(data)+1).toString();
 	                        console.log('new dummy is: '+ dummy)
-	                        
-	                        
+
+
 	                        object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	                        object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	                        object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
-	                        
+
 	                        object.html=object.html.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	                        object.html=object.html.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
 	                        object.html=object.html.replace('applications/'+id+'/'+id+'.js','applications/'+dummy+'/'+dummy+'.js');
@@ -519,7 +523,7 @@ module.exports = {
 	                        console.log('"objectId before":"'+object.mongo.objectId+'"')
 	                        object.mongo.objectId=dummy;
 	                        console.log('"objectId after":"'+object.mongo.objectId+'"')
-	                        
+
 	                        //Apio.Database.db.collection('Objects').insert(JSON.parse(object.json),function(err,data){
 	                        Apio.Database.db.collection('Objects').insert(object.mongo,function(err,data){
 	                            if(err)
@@ -532,7 +536,7 @@ module.exports = {
 	                                fs.mkdirSync(path +'/'+ dummy);
 	                                fs.mkdirSync(path +'/'+ dummy + '/_' + dummy);
 	                                if(object.hasOwnProperty('adapter')){
-										fs.writeFileSync(path+'/'+dummy+'/adapter.js',object.adapter);	    		
+										fs.writeFileSync(path+'/'+dummy+'/adapter.js',object.adapter);
 									}
 	                                fs.writeFileSync(path+'/'+dummy+'/icon.png',object.icon);
 	                                fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.html',object.html);
@@ -570,9 +574,27 @@ module.exports = {
 	            res.send(data);
 	        }
 	    });
-	
+
 	},
-	gitCloneApp : function(req,res){
+	gitCloneMongo : function(req,res){
+		console.log('/apio/app/gitCloneMongo');
+		//clone(repo, targetPath, [options], cb)
+		var repo = req.body.gitPath;
+		var targetPath = "./temp";
+		deleteFolderRecursive("./temp"); // be sure temp folder does not exist. If exist it automatically delete it
+		fs.mkdirSync("./temp"); //create a new temp folder
+		clone(repo, targetPath, function(){
+			console.log('cloned repo '+repo+' in target '+targetPath);
+			console.log('uploading the app in the Apio Application folder');
+      exec("mongorestore ./temp/apio -d apio", function(err,stdout,stderr){
+        console.log(stdout);
+      });
+      res.send();
+			//res.send({data:'gitCloneApp has been executed'});
+		})
+	},
+
+  gitCloneApp : function(req,res){
 		console.log('/apio/app/gitCloneApp');
 		//clone(repo, targetPath, [options], cb)
 		var repo = req.body.gitPath;
@@ -596,15 +618,16 @@ module.exports = {
                     var object = {};
                     var jsonObject = {};
 
-                    object.icon = fs.readFileSync('./temp/'+id+'/icon.png');
+                    if( fs.existsSync('./temp/'+id+'/adapter.js') ) {
+						object.adapter = fs.readFileSync('./temp/'+id+'/adapter.js')
+					}
+
+                    object.icon = fs.readFileSync('./temp/'+id+'/icon.png', {encoding: 'base64'});
                     object.js = fs.readFileSync(path+'.js', {encoding: 'utf8'});
                     object.html = fs.readFileSync(path+'.html', {encoding: 'utf8'});
                     //object.json = fs.readFileSync(path+'.json', {encoding: 'utf8'});
                     object.mongo = fs.readFileSync(path+'.mongo', {encoding: 'utf8'});
 
-                    
-                    
-                    console.log('STRONZISSIMO')
                     console.log(object.mongo)
                     path = './temp/'+id+'/_'+id;
                     object.ino = fs.readFileSync(path+'/_'+id+'.ino', {encoding: 'utf8'});
@@ -616,12 +639,12 @@ module.exports = {
 
                     var dummy = (parseInt(data)+1).toString();
                     console.log('new dummy is: '+ dummy)
-                    
+
 
                     object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
                     object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
                     object.js=object.js.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
-                    
+
                     object.html=object.html.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
                     object.html=object.html.replace('ApioApplication'+id,'ApioApplication'+dummy+'');
                     object.html=object.html.replace('applications/'+id+'/'+id+'.js','applications/'+dummy+'/'+dummy+'.js');
@@ -629,15 +652,14 @@ module.exports = {
                     //object.json=object.json.replace('"objectId":"'+id+'"','"objectId":"'+dummy+'"');
                     //object.mongo=object.mongo.replace('"objectId":"'+id+'"','"objectId":"'+dummy+'"')
                     object.mongo=JSON.parse(object.mongo);
-                    console.log('STRONZISSIMO DUE')
                     console.log(object.mongo)
                     console.log('"objectId before":"'+object.mongo.objectId+'"')
                     object.mongo.objectId=dummy;
-                    
-                    var appoggio = JSON.stringify(object.mongo); 
+
+                    var appoggio = JSON.stringify(object.mongo);
 
                     console.log('"objectId after":"'+object.mongo.objectId+'"')
-                    
+
                     //Apio.Database.db.collection('Objects').insert(JSON.parse(object.json),function(err,data){
                     Apio.Database.db.collection('Objects').insert(object.mongo,function(err,data){
                     	console.log()
@@ -647,21 +669,22 @@ module.exports = {
                         {
                             var path = 'public/applications/';
                             console.log('path + dummy:'+path + dummy);
-                            console.log('STRONZO')
                             console.log(object.mongo)
-                            console.log('STRONZO A STRINGA')
                             console.log(JSON.stringify(object.mongo))
 
                             fs.mkdirSync(path +'/'+ dummy);
                             fs.mkdirSync(path +'/'+ dummy + '/_' + dummy);
-                            fs.writeFileSync(path+'/'+dummy+'/icon.png',object.icon);
+                            if(object.hasOwnProperty('adapter')){
+								fs.writeFileSync(path+dummy+'/adapter.js',req.body.adapter);
+							}
+                            fs.writeFileSync(path+'/'+dummy+'/icon.png',object.icon, {encoding: 'base64'});
                             fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.html',object.html);
                             fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.js',object.js);
                             //fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.mongo',JSON.stringify(object.mongo));
                             fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.mongo',appoggio);
                             fs.writeFileSync(path+'/'+dummy+'/_' + dummy + '/_' + dummy + '.ino',object.ino);
                             fs.writeFileSync(path+'/'+dummy+'/_' + dummy + '/Makefile',object.makefile);
-                            //fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.json',object.json);
+                            fs.writeFileSync(path+'/'+dummy+'/' + dummy + '.json',object.json);
                             deleteFolderRecursive('./temp');
                             res.send({id:dummy});
                         }
@@ -669,8 +692,25 @@ module.exports = {
 				}
 
 			})
-			//res.send({data:'gitCloneApp has been executed'});	
+			//res.send({data:'gitCloneApp has been executed'});
 		})
-	}
+	},
 
+  mongoRestore: function(req,res){
+    console.log("lorem ipsum");
+    exec("mongorestore ./data/apio -d apio", function(err,stdout,stderr){
+      console.log(stdout);
+    });
+    res.send();
+
+  },
+
+  backupDatabase: function(req,res){
+    console.log("Backup Database");
+    exec("mongodump --out ./data", function(err,stdout,stderr){
+      console.log(stdout);
+    });
+    res.send();
+
+  }
 }

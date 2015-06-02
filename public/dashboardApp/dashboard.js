@@ -22,7 +22,7 @@
 var Apio = require ('../javascripts/apio.client.js');
 var ApioDashboardApplication = angular.module('ApioDashboardApplication',['ui.utils','ui.ace','hSweetAlert','ui.router','angularFileUpload','ngImgCrop']);
 
-//Trova un modo migliore per iniettare le dipendenze 
+//Trova un modo migliore per iniettare le dipendenze
 window.Apio = Apio;
 window.$ = $;
 Apio.Socket.init();
@@ -33,7 +33,7 @@ Apio.Socket.init();
 ApioDashboardApplication.factory('socket', function ($rootScope) {
   return {
     on: function (eventName, callback) {
-      Apio.socket.on(eventName, function () {  
+      Apio.socket.on(eventName, function () {
         var args = arguments;
         $rootScope.$apply(function () {
           callback.apply(Apio.socket, args);
@@ -66,7 +66,7 @@ ApioDashboardApplication.factory('objectService', ['$rootScope','$http',function
       var promise = $http.get('/apio/database/getObjectById/'+id).then(function(response){
         return response;
       })
-      return promise;      
+      return promise;
     }
   }
 }]);
@@ -75,7 +75,7 @@ ApioDashboardApplication.factory('objectService', ['$rootScope','$http',function
 ApioDashboardApplication.directive('wizardObject', function(){
   return{
     restrict : 'E',
-    templateUrl : '/dashboardApp/objects/objectsApp/new/wizard/wizard_object.html' 
+    templateUrl : '/dashboardApp/objects/objectsApp/new/wizard/wizard_object.html'
   };
 });
 //properties injector directive
@@ -123,11 +123,11 @@ ApioDashboardApplication.directive('wizardEditor', function(){
 
 /* Apio ui router declaration */
 ApioDashboardApplication.config(function($stateProvider, $urlRouterProvider) {
-    
+
     $urlRouterProvider.otherwise('/');
-    
+
     $stateProvider
-        
+
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
@@ -158,6 +158,12 @@ ApioDashboardApplication.config(function($stateProvider, $urlRouterProvider) {
                 controller: 'ApioDashboardImportController'
             })
 
+            .state('objects.database', {
+                url: '/database',
+                templateUrl: '/dashboardApp/objects/objectsApp/database/database.html',
+                controller: 'ApioDashboardDatabaseController'
+            })
+
         .state('events', {
             url: '/events',
             templateUrl: '/html/dashboard/dashboard_events.html',
@@ -179,7 +185,7 @@ ApioDashboardApplication.config(function($stateProvider, $urlRouterProvider) {
             url: '/documentation',
             templateUrl: '/html/dashboard/dashboard_documentation.html'
         })
-        
+
 });
 
 ApioDashboardApplication.controller('ApioDashboardGeneralController', ['$scope','objectService','$state', function($scope,objectService,$state){
@@ -210,7 +216,7 @@ ApioDashboardApplication.controller('ApioDashboardGeneralController', ['$scope',
         }
   };
   $scope.currentPage='';
-  $scope.switchPage = function(pageName) {  
+  $scope.switchPage = function(pageName) {
     //$('.dashboardPage#'+$scope.currentPage).css('display','none');
     //$('.dashboardPage#'+pageName).css('display','block');
 
