@@ -586,7 +586,7 @@ module.exports = {
 		clone(repo, targetPath, function(){
 			console.log('cloned repo '+repo+' in target '+targetPath);
 			console.log('uploading the app in the Apio Application folder');
-      exec("mongorestore ./temp/apio -d apio", function(err,stdout,stderr){
+      exec("mongo apio --eval \"db.dropDatabse()\" && mongorestore ./temp/apio -d apio", function(err,stdout,stderr){
         console.log(stdout);
       });
       res.send();
@@ -698,7 +698,7 @@ module.exports = {
 
   mongoRestore: function(req,res){
     console.log("lorem ipsum");
-    exec("mongorestore ./data/apio -d apio", function(err,stdout,stderr){
+    exec("mongo apio --eval \"db.dropDatabase()\" && mongorestore ./data/apio -d apio", function(err,stdout,stderr){
       console.log(stdout);
     });
     res.send();
